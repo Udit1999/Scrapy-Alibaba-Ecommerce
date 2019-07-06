@@ -32,4 +32,9 @@ pip install -r requirements.txt
 ```sh
 pip install Scrapy
 ```
+### Usage 
 
+1. To run the crawler(spider):
+```sh
+scrapy crawl -o alibaba.csv product_crawler
+```
