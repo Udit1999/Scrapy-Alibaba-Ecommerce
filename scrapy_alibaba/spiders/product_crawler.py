@@ -20,9 +20,10 @@ class ProductCrawlerSpider(scrapy.Spider):
             raw_product_name = product.xpath(XPATH_PRODUCT_NAME).extract()
             raw_num_product  = product.xpath(XPATH_NUM_PRODUCT).extract()
             
+            
             product_name = ''.join(raw_product_name).strip() if raw_product_name else None
             num_product = ''.join(raw_num_product).strip() if raw_num_product else None
-			
+            # num_product = num_product[1:]
             yield {
             'product_name':product_name,
             'num_product':num_product
